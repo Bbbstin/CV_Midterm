@@ -222,7 +222,7 @@ for epoch in range(start_epoch, start_epoch + args.max_epoch):
     print(f"Epoch: {epoch + 1}")
     print(f"Learning Rate: {optimizer.param_groups[0]['lr']:.6f}")
     print(
-        f"Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.2f}% | Train Acc 5: {train_acc_5:.2f}%"
+        f"Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.2f}% | Train Acc@5: {train_acc_5:.2f}%"
     )
     print(
         f"Test Loss: {test_loss:.4f} | Test Acc: {test_acc:.2f}% | Test Acc@5: {test_acc_5:.2f}%"
