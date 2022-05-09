@@ -221,7 +221,9 @@ for epoch in range(start_epoch, start_epoch + args.max_epoch):
     print("============================================================")
     print(f"Epoch: {epoch + 1}")
     print(f"Learning Rate: {optimizer.param_groups[0]['lr']:.6f}")
-    print(f"Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.2f}%")
+    print(
+        f"Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.2f}% | Train Acc 5: {train_acc_5:.2f}%"
+    )
     print(
         f"Test Loss: {test_loss:.4f} | Test Acc: {test_acc:.2f}% | Test Acc@5: {test_acc_5:.2f}%"
     )
@@ -234,12 +236,9 @@ for epoch in range(start_epoch, start_epoch + args.max_epoch):
     # test_losses.append(test_loss)
     # test_accuracies.append(test_acc)
     # lr_schedule.append(optimizer.param_groups[0]['lr'])
-    writer.add_scalar('Loss/train', train_loss, epoch)
-    writer.add_scalar('Accuracy/train', train_acc, epoch)
-    writer.add_scalar('Accuracy@5/train', train_acc_5, epoch)
-    writer.add_scalar('Loss/test', test_loss, epoch)
-    writer.add_scalar('Accuracy/test', test_acc, epoch)
-    writer.add_scalar('Accuracy@5/test', test_acc_5, epoch)
+    writer.add_scalar('Loss', {'train': train_loss, 'test': test_loss}, epoch)
+    writer.add_scalar('Accuracy', {'train': train_acc, 'test': test_acc}, epoch)
+    writer.add_scalar('Accuracy@5', {'train': train_acc_5, 'test': test_acc_5}, epoch)
 
 
 # Plot
