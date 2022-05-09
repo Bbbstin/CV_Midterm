@@ -236,9 +236,9 @@ for epoch in range(start_epoch, start_epoch + args.max_epoch):
     # test_losses.append(test_loss)
     # test_accuracies.append(test_acc)
     # lr_schedule.append(optimizer.param_groups[0]['lr'])
-    writer.add_scalar('Loss', {'train': train_loss, 'test': test_loss}, epoch)
-    writer.add_scalar('Accuracy', {'train': train_acc, 'test': test_acc}, epoch)
-    writer.add_scalar('Accuracy@5', {'train': train_acc_5, 'test': test_acc_5}, epoch)
+    writer.add_scalars('Loss', {'train': train_loss, 'test': test_loss}, epoch)
+    writer.add_scalars('Accuracy', {'train': train_acc, 'test': test_acc}, epoch)
+    writer.add_scalars('Accuracy@5', {'train': train_acc_5, 'test': test_acc_5}, epoch)
 
 
 # Plot
