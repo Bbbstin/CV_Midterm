@@ -156,3 +156,7 @@ data/
 
 # Checkpoints
 checkpoints/
+
+# DS_Store
+.DS_Store
+cifar-100/.DS_Store
