@@ -28,6 +28,7 @@ from .resnext import (
     ResNeXt_3,
     ResNeXt_4,
     ResNeXt29_8x64d,
+    ResNeXt29_32x8d,
     ResNeXt29_16x64d,
     ResNeXt50_32x4d,
 )

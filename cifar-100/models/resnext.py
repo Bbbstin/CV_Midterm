@@ -51,7 +51,7 @@ class Block(nn.Module):
 
 
 class ResNeXt_3(nn.Module):
-    def __init__(self, num_blocks, cardinality, bottleneck_width, num_classes=10):
+    def __init__(self, num_blocks, cardinality, bottleneck_width, num_classes=100):
         super(ResNeXt_3, self).__init__()
         self.cardinality = cardinality
         self.bottleneck_width = bottleneck_width
@@ -128,6 +128,10 @@ class ResNeXt_4(nn.Module):
 
 def ResNeXt29_8x64d():
     return ResNeXt_3(num_blocks=[3, 3, 3], cardinality=8, bottleneck_width=64)
+
+
+def ResNeXt29_32x8d():
+    return ResNeXt_3(num_blocks=[3, 3, 3], cardinality=32, bottleneck_width=8)
 
 
 def ResNeXt29_16x64d():

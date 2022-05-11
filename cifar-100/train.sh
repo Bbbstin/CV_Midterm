@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py --model=ResNet18 --batch-size=256 --lr=0.1
 # CUDA_VISIBLE_DEVICES=0 python main.py --model=ResNet50 --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
 # CUDA_VISIBLE_DEVICES=0 python main.py --model=PreActResNet50 --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
 # CUDA_VISIBLE_DEVICES=0 python main.py --model=WideResNet28x10 --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
-# CUDA_VISIBLE_DEVICES=0 python main.py --model=ResNeXt29_16x64d --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
+# CUDA_VISIBLE_DEVICES=0 python main.py --model=ResNeXt29_32x8d --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
 # CUDA_VISIBLE_DEVICES=0 python main.py --model=ResNeXt50_32x4d --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
 # CUDA_VISIBLE_DEVICES=0 python main.py --model=DenseNet201 --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
 # CUDA_VISIBLE_DEVICES=0 python main.py --model=DPN92 --batch-size=256 --lr=0.1 --max-epoch=300 --use-cutmix
