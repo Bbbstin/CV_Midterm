@@ -1,6 +1,6 @@
 # Faster R-CNN
 
-Since we cannot upload large files to GitHub, we leave some large images, the VOC dataset, and the trained models out. And you can download it in . And the structure of this repo is the full version of the repo (no the one you see here). And you can just add these files to where it should existg in.
+Since we cannot upload large files to GitHub, we leave some large images, the VOC dataset, and the trained models out. And you can download it in our releases. And the structure of this repo is the full version of the repo (no the one you see here). And you can just add these files to where it should existg in.
 
 The changes are:
 
@@ -8,7 +8,7 @@ Add images to folder img.
 
 Add "best_model_frcnn07.pth" to folder logs.
 
-Add "resnet50-19c8e357.pth", "simhei.ttf", and "best_model_frcnn0712.pth" to folder model_data.
+Add "best_model_frcnn0712.pth" to folder model_data.
 
 Add the unziped VOC dataset to VOCdevkit (not provided).
 
