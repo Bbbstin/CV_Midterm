@@ -26,19 +26,7 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 │   ├── midway.jpg
 │   └── midway_predict.png
 ├── logs: logs
-│   ├── best_epoch_weights.pth
-│   ├── events.out.tfevents.1652020951.container-b87811a73c-d1917317.212332.0
-│   ├── last_epoch_weights.pth
-│   ├── loss_2022_05_09_11_49_39
-│   │   ├── epoch_loss.png
-│   │   ├── epoch_loss.txt
-│   │   ├── epoch_val_loss.txt
-│   │   ├── events.out.tfevents.1652068177.container-b87811a73c-d1917317.539992.0
-│   │   ├── loss_train_loss
-│   │   │   └── events.out.tfevents.1652068426.container-b87811a73c-d1917317.539992.2
-│   │   └── loss_val_loss
-│   │       └── events.out.tfevents.1652068426.container-b87811a73c-d1917317.539992.3
-│   └── nohup.out
+│   └── best_epoch_weights.pth
 ├── model_data: store the model data, and dataset classes.
 │   ├── resnet50-19c8e357.pth
 │   ├── simhei.ttf
