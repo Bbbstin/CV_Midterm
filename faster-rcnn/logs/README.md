@@ -1,2 +1,2 @@
-Put "best_epoch_weight.pth" to this folder.
+Put "best_model_frcnn07.pth" to this folder.
 
