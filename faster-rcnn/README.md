@@ -77,3 +77,10 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 3. Run train.py to start training.
 
 4. To predict the new image, change the model_path to the model path, and classes_path to the classes path in file frcnn.py. After that, run predict.py and enter the image path to get the prediction. The image after prediction is saved in the same folder as the input image.
+
+## Result
+
+| model        | backbone  | dataset       | mAP0.5     |
+| ------------ | --------- | ------------- | ---------- |
+| Faster R-CNN | ResNet-50 | VOC 2007      | 69.79%     |
+|              |           | VOC 2007+2012 | **77.44%** |
