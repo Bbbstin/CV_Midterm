@@ -8,7 +8,7 @@ Add images to folder img.
 
 Add "best_model_frcnn07.pth" to folder logs.
 
-Add "resnet50-19c8e357.pth", "simhei.ttf", and "best_model_frcnn0712.pth" to folder model_data.
+Add "best_model_frcnn0712.pth" to folder model_data.
 
 Add the unziped VOC dataset to VOCdevkit (not provided).
 
