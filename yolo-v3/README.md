@@ -1,14 +1,14 @@
-# Faster R-CNN
+# YOLO v3
 
-Since we cannot upload large files to GitHub, we leave some large images, the VOC dataset, and the trained models out. And you can download it in our releases. And the structure of this repo is the full version of the repo (no the one you see here). And you can just add these files to where it should existg in.
+Since we cannot upload large files to GitHub, we leave some large images, the VOC dataset, and the trained models out. And you can download it in our releases. And the structure of this repo is the full version of the repo (no the one you see here). And you can just add these files to where it should exist in.
 
 The changes are:
 
 Add images to folder img.
 
-Add `best_model_frcnn07.pth` to folder logs.
+Add `best_model_yolo.pth` to folder model_data.
 
-Add `best_model_frcnn0712.pth` to folder model_data.
+Modify `model_path` setting in yolo.py.
 
 Add the unziped VOC dataset to VOCdevkit (not provided).
 
@@ -16,7 +16,6 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 ```
 ├── README.md
 ├── VOCdevkit: to put the VOC dataset in.
-├── frcnn.py
 ├── get_map.py
 ├── img: image for prediction.
 │   ├── bus.jpg
@@ -28,10 +27,9 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 ├── logs: logs
 │   └── best_epoch_weights.pth
 ├── model_data: store the model data, and dataset classes.
-│   ├── resnet50-19c8e357.pth
 │   ├── simhei.ttf
 │   ├── voc_classes.txt
-│   └── voc_weights_resnet.pth
+│   └── yolo_anchors.txt
 ├── nets
 │   ├── __init__.py
 │   ├── classifier.py
@@ -41,20 +39,18 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 │   ├── rpn.py
 │   └── vgg16.py
 ├── predict.py
-├── proposal_box.py
 ├── summary.py
-├── train.py: run this to train the model
+├── train.py: run this to train the model.
 ├── utils
 │   ├── __init__.py
-│   ├── anchors.py
 │   ├── callbacks.py
 │   ├── dataloader.py
-│   ├── util_miou.py
 │   ├── utils.py
 │   ├── utils_bbox.py
 │   ├── utils_fit.py
 │   └── utils_map.py
-└── voc_annotation.py: run this script first.
+├── voc_annotation.py: run this script first.
+└── yolo.py
 ```
 
 ## Training and Predicting Process
@@ -64,11 +60,13 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 
 3. Run train.py to start training.
 
-4. To predict the new image, change the model_path to the model path, and classes_path to the classes path in file frcnn.py. After that, run predict.py and enter the image path to get the prediction. The image after prediction is saved in the same folder as the input image.
+4. To predict the new image, change the model_path to the model path, and classes_path to the classes path in file yolo.py. After that, run predict.py and enter the image path to get the prediction. The image after prediction is saved in the same folder as the input image.
 
 ## Result
 
-| model        | backbone  | dataset       | mAP0.5     |
-| ------------ | --------- | ------------- | ---------- |
-| Faster R-CNN | ResNet-50 | VOC 2007      | 69.79%     |
-|              |           | VOC 2007+2012 | **77.44%** |
+| model   | backbone   | dataset  | mAP0.5 |
+| ------- | ---------- | -------- | ------ |
+| YOLO v3 | Darknet-53 | VOC 2007 | 86.83% |
+
+<img src="./map_out/results/map.png" alt="mAP" style="zoom:90%;" />
+
