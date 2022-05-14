@@ -1,8 +1,8 @@
 # CV_Midterm
 This is the midterm assignment of DATA130051 Computer Vision.
 
-In the first part of the project, we use several CNNs to build classifiers for CIFAR-
-100, and try to use some augmentation methods like cutmix, cutout, and mixup
+In the first part of the project, we use several CNNs to build classifiers for CIFAR-100, 
+and try to use some augmentation methods like cutmix, cutout, and mixup
 to improve the model’s accuracy. And we finally get a top-1 accuracy of 83.01%
 and top-5 accuracy of 95.70% using the WideResNet-28. 
 
