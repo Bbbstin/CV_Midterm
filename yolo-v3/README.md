@@ -68,5 +68,5 @@ Add the unziped VOC dataset to VOCdevkit (not provided).
 | ------- | ---------- | -------- | ------ |
 | YOLO v3 | Darknet-53 | VOC 2007 | 86.83% |
 
-<img src="./map_out/results/map.png" alt="mAP" style="zoom:90%;" />
+<img src="./map_out/results/mAP.png" alt="mAP" style="zoom:90%;" />
 
